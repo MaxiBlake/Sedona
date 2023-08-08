@@ -54,6 +54,17 @@ body{
     background-color: #F2F2F2;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .button {
     font-family: "PT Sans", sans-serif;
     font-weight: 700;
@@ -98,17 +109,36 @@ body{
 }
 
 .navigation-list {
-    width: 460px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 920px;
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    align-items: center;
 }
 
 .navigation-user {
-    max-width: 264px;
+    min-width: 264px;
     margin-left: auto;
 }
 
+.navigation-user .navigation-link {
+    min-width: 42px;
+    min-height: 66px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.navigation-user .navigation-button {
+    min-height: 37px;
+    min-width: 160px;
+    padding: 10px 17px;
+}
+
 .navigation-link {
+    display: block;
+    padding: 10px 17px;
     font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 20px;
@@ -123,10 +153,15 @@ body{
     margin-right: auto;
 }
 
+.intro-image {
+    width: 1200px;
+    height: 485px;
+    background-image: url("../image/index-background.jpg");
+}
+
 .main-index {
     color: #333333;
     background-color: #ffffff;
-    background-image: url("../image/index-background.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
